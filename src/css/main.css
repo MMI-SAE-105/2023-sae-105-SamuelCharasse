@@ -1,0 +1,32 @@
+@import url(/src/css/header.css);
+
+@import url('https://fonts.googleapis.com/css2?family=Major+Mono+Display&family=Sometype+Mono:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: #FDF7FA;
+    font-family: 'Sometype Mono', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.5;
+}
+h1 {
+    font-family: 'Major Mono Display', sans-serif;
+    font-size: 36px;
+    letter-spacing: 70%;
+}
+h2 {
+    font-family: 'Sometype Mono', sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    letter-spacing: 70%;
+}
+h3 {
+    font-family: 'Sometype Mono', sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    letter-spacing: 70%;
+}
