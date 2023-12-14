@@ -3,6 +3,7 @@
 @import url(./carousel.css);
 @import url(./styleguide.css);
 @import url(./footer.css);
+@import url(./home.css);
 
 @import url('https://fonts.googleapis.com/css2?family=Major+Mono+Display&family=Sometype+Mono:wght@400;700&display=swap');
 
@@ -20,6 +21,7 @@ body {
     font-weight: var(--body-font-weight);
     font-size: var(--body-font-size);
     line-height: var(--body-line-height);
+    color: var(--main-black);
 }
 h1 {
     font-family: var(--h1-font-family);

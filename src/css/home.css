@@ -1,0 +1,29 @@
+.home {
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+    gap: 48px;
+}
+.home__introduction {
+    display: flex;
+    flex-direction: column;
+    padding: 8px;
+    gap: 8px;
+}
+.home__information, .home__contact {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding: 8px;
+    gap: 32px;
+}
+.home__about {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 8px;
+    gap: 32px;
+}
+.home__about--title {
+    text-align: right;
+}
