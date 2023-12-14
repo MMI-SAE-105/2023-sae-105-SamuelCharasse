@@ -49,6 +49,7 @@
     --smalltext-letter-spacing: 0px;
     --smalltext-line-height: normal;
     --smalltext-font-style: normal;
+    /* Small Text Uppercase CSS */
     --smalltext-uppercase-font-family: "Sometype Mono Medium", sans-serif;
     --smalltext-uppercase-font-weight: 500;
     --smalltext-uppercase-font-size: 12px;
