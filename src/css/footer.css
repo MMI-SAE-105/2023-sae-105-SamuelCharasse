@@ -54,3 +54,13 @@
     line-height: var(--smalltext-line-height);
     font-style: var(--smalltext-font-style);
 }
+.footer__information--link, .footer__ticketing--link {
+    text-decoration: none;
+    font-family: var(--smalltext-uppercase-font-family);
+    font-weight: var(--smalltext-uppercase-font-weight);
+    font-size: var(--smalltext-uppercase-font-size);
+    letter-spacing: var(--smalltext-uppercase-letter-spacing);
+    line-height: var(--smalltext-uppercase-line-height);
+    font-style: var(--smalltext-uppercase-font-style);
+    color: var(--main-white);
+}
