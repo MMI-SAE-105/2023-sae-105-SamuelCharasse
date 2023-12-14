@@ -1,7 +1,7 @@
 .home {
     display: flex;
     flex-direction: column;
-    padding: 16px;
+    padding: 32px 16px;
     gap: 48px;
 }
 .home__introduction {
