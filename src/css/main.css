@@ -6,6 +6,7 @@
 @import url(./home.css);
 @import url(./information.css);
 @import url(./about.css);
+@import url(./form.css);
 
 @import url('https://fonts.googleapis.com/css2?family=Major+Mono+Display&family=Sometype+Mono:wght@400;700&display=swap');
 
@@ -55,4 +56,5 @@ h3 {
     padding: 16px;
     gap: 10px;
     border-radius: 8px;
+    box-shadow: 0px 1px 4px 0px rgba(0,0,0,0.60)
 }
