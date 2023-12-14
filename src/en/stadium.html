@@ -42,9 +42,31 @@
             <h3 class="article--h3">Columns as Sentinels of Accessibility</h3>
             <p class="article--content">One cannot overlook the countless columns that stand as sentinels on the stadium's grand stairs. Accompanying visitors on their journey in and out of the arena, these columns form a powerful gesture of openness and accessibility. Herzog & De Meuron have ingeniously fused the elements of stairs and columns, creating an architectural language that not only guides but also welcomes all who approach the stadium.</p>
         </section>
-        <section class="carousel">
-            
-        </section>
+        <div class="carrousel" x-data="{hrefCourant: '#ecran-1'}">
+            <button @click="$refs.parent.scrollLeft-=$refs.parent.clientWidth" class="carrousel__btn carrousel__btn--avant" aria-label="slide précedant"><</button><button @click="$refs.parent.scrollLeft+=$refs.parent.clientWidth" class="carrousel__btn carrousel__btn--apres" aria-label="slide suivant">></button>
+            <div class="carrousel__parent--ecrans" x-ref="parent" @scroll.debounce.250ms.passive="hrefCourant='#'+[...$refs.parent.children].find(e=>e.getBoundingClientRect().x>=0).id">
+                <div id="ecran-1" class="carrousel__ecran">
+                    <figure>
+                        <img src="/public/img/Bordeaux_2.webp" alt="3D image of Bordeaux Stadium">
+                    </figure>
+                </div>
+                <div id="ecran-2" class="carrousel__ecran">
+                    <figure>
+                        <img src="/public/img/Bordeaux_3.webp" alt="3D image of Bordeaux Stadium">
+                    </figure>
+                </div>
+                <div id="ecran-3" class="carrousel__ecran">
+                    <figure>
+                        <img src="/public/img/Bordeaux_5.webp" alt="3D image of Bordeaux Stadium">
+                    </figure>
+                </div>
+                <div id="ecran-4" class="carrousel__ecran">
+                    <figure>
+                        <img src="/public/img/Bordeaux_6.webp" alt="3D image of Bordeaux Stadium">
+                    </figure>
+                </div>
+            </div>
+        </div>
         <footer class="footer">
             <img src="/public/icons/logo_svg_optima_48px.svg" alt="Optima logo">
             <div class="footer__information">

@@ -42,9 +42,31 @@
             <h3 class="article--h3">Aesthetic Integration with Nature</h3>
             <p class="article--content">The architects' vision extends beyond the cityscape to the natural beauty that surrounds Burgos. Integrating their designs with the landscapes, Herzog & De Meuron create a seamless transition between urban and natural environments. The result is an aesthetic integration that not only enhances the visual appeal of the architecture but also fosters a sense of connection with the natural wonders that define the region.</p>
         </section>
-        <section class="carousel">
-            
-        </section>
+        <div class="carrousel" x-data="{hrefCourant: '#ecran-1'}">
+            <button @click="$refs.parent.scrollLeft-=$refs.parent.clientWidth" class="carrousel__btn carrousel__btn--avant" aria-label="slide précedant"><</button><button @click="$refs.parent.scrollLeft+=$refs.parent.clientWidth" class="carrousel__btn carrousel__btn--apres" aria-label="slide suivant">></button>
+            <div class="carrousel__parent--ecrans" x-ref="parent" @scroll.debounce.250ms.passive="hrefCourant='#'+[...$refs.parent.children].find(e=>e.getBoundingClientRect().x>=0).id">
+                <div id="ecran-1" class="carrousel__ecran">
+                    <figure>
+                        <img src="/public/img/Burgos_2.webp" alt="3D image of Burgos Bulevar">
+                    </figure>
+                </div>
+                <div id="ecran-2" class="carrousel__ecran">
+                    <figure>
+                        <img src="/public/img/Burgos_3.webp" alt="3D image of Burgos Bulevar">
+                    </figure>
+                </div>
+                <div id="ecran-3" class="carrousel__ecran">
+                    <figure>
+                        <img src="/public/img/Burgos_4.webp" alt="3D image of Burgos Bulevar">
+                    </figure>
+                </div>
+                <div id="ecran-4" class="carrousel__ecran">
+                    <figure>
+                        <img src="/public/img/Burgos_5.webp" alt="3D image of Burgos Bulevar">
+                    </figure>
+                </div>
+            </div>
+        </div>
         <footer class="footer">
             <img src="/public/icons/logo_svg_optima_48px.svg" alt="Optima logo">
             <div class="footer__information">

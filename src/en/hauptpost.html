@@ -42,9 +42,31 @@
             <h3 class="article--h3">Sustainable Design for the Future</h3>
             <p class="article--content">Hauptpost Basel exemplifies Herzog & De Meuron's commitment to sustainable architecture. The project incorporates cutting-edge sustainable design principles, ensuring that it not only serves the current generation but stands as a resilient structure for generations to come. From energy-efficient systems to eco-friendly materials, every aspect is meticulously crafted for a sustainable future.</p>
         </section>
-        <section class="carousel">
-            
-        </section>
+        <div class="carrousel" x-data="{hrefCourant: '#ecran-1'}">
+            <button @click="$refs.parent.scrollLeft-=$refs.parent.clientWidth" class="carrousel__btn carrousel__btn--avant" aria-label="slide précedant"><</button><button @click="$refs.parent.scrollLeft+=$refs.parent.clientWidth" class="carrousel__btn carrousel__btn--apres" aria-label="slide suivant">></button>
+            <div class="carrousel__parent--ecrans" x-ref="parent" @scroll.debounce.250ms.passive="hrefCourant='#'+[...$refs.parent.children].find(e=>e.getBoundingClientRect().x>=0).id">
+                <div id="ecran-1" class="carrousel__ecran">
+                    <figure>
+                        <img src="/public/img/Hauptpost_2.webp" alt="3D image of Hauptpost Basel">
+                    </figure>
+                </div>
+                <div id="ecran-2" class="carrousel__ecran">
+                    <figure>
+                        <img src="/public/img/Hauptpost_3.webp" alt="3D image of Hauptpost Basel">
+                    </figure>
+                </div>
+                <div id="ecran-3" class="carrousel__ecran">
+                    <figure>
+                        <img src="/public/img/Hauptpost_4.webp" alt="3D image of Hauptpost Basel">
+                    </figure>
+                </div>
+                <div id="ecran-4" class="carrousel__ecran">
+                    <figure>
+                        <img src="/public/img/Hauptpost_5.webp" alt="3D image of Hauptpost Basel">
+                    </figure>
+                </div>
+            </div>
+        </div>
         <footer class="footer">
             <img src="/public/icons/logo_svg_optima_48px.svg" alt="Optima logo">
             <div class="footer__information">

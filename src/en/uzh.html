@@ -42,9 +42,31 @@
             <h3 class="article--h3">Historical Echoes Along Rämistrasse</h3>
             <p class="article--content">As the FORUM UZH takes shape, it not only symbolizes progress but also pays homage to the historical context along Rämistrasse. Lined with classicist public buildings, this thoroughfare becomes a living testament to the evolution of Zurich, where the past gracefully meets the future, and where the pursuit of knowledge has been a constant thread weaving through time.</p>
         </section>
-        <section class="carousel">
-            
-        </section>
+        <div class="carrousel" x-data="{hrefCourant: '#ecran-1'}">
+            <button @click="$refs.parent.scrollLeft-=$refs.parent.clientWidth" class="carrousel__btn carrousel__btn--avant" aria-label="slide précedant"><</button><button @click="$refs.parent.scrollLeft+=$refs.parent.clientWidth" class="carrousel__btn carrousel__btn--apres" aria-label="slide suivant">></button>
+            <div class="carrousel__parent--ecrans" x-ref="parent" @scroll.debounce.250ms.passive="hrefCourant='#'+[...$refs.parent.children].find(e=>e.getBoundingClientRect().x>=0).id">
+                <div id="ecran-1" class="carrousel__ecran">
+                    <figure>
+                        <img src="/public/img/UZH_2.webp" alt="3D image of Forum UZH">
+                    </figure>
+                </div>
+                <div id="ecran-2" class="carrousel__ecran">
+                    <figure>
+                        <img src="/public/img/UZH_3.webp" alt="3D image of Forum UZH">
+                    </figure>
+                </div>
+                <div id="ecran-3" class="carrousel__ecran">
+                    <figure>
+                        <img src="/public/img/UZH_4.webp" alt="3D image of Forum UZH">
+                    </figure>
+                </div>
+                <div id="ecran-4" class="carrousel__ecran">
+                    <figure>
+                        <img src="/public/img/UZH_5.webp" alt="3D image of Forum UZH">
+                    </figure>
+                </div>
+            </div>
+        </div>
         <footer class="footer">
             <img src="/public/icons/logo_svg_optima_48px.svg" alt="Optima logo">
             <div class="footer__information">

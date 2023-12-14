@@ -42,9 +42,36 @@
             <h3 class="article--h3">Vibrant Contemporary Gathering Place</h3>
             <p class="article--content">Beyond its role as a repository of history, the Grand Canal Museum Complex aspires to be a vibrant, contemporary gathering place. Herzog & De Meuron envisions the space as a hub for cultural exchange, community engagement, and artistic expression. The design, with its thoughtful integration of indoor and outdoor spaces, aims to create an inviting environment for locals and visitors alike.</p>
         </section>
-        <section class="carousel">
-            
-        </section>
+        <div class="carrousel" x-data="{hrefCourant: '#ecran-1'}">
+            <button @click="$refs.parent.scrollLeft-=$refs.parent.clientWidth" class="carrousel__btn carrousel__btn--avant" aria-label="slide précedant"><</button><button @click="$refs.parent.scrollLeft+=$refs.parent.clientWidth" class="carrousel__btn carrousel__btn--apres" aria-label="slide suivant">></button>
+            <div class="carrousel__parent--ecrans" x-ref="parent" @scroll.debounce.250ms.passive="hrefCourant='#'+[...$refs.parent.children].find(e=>e.getBoundingClientRect().x>=0).id">
+                <div id="ecran-1" class="carrousel__ecran">
+                    <figure>
+                        <img src="/public/img/Museum_2.webp" alt="3D image of Grand Canal Museum Complex">
+                    </figure>
+                </div>
+                <div id="ecran-2" class="carrousel__ecran">
+                    <figure>
+                        <img src="/public/img/Museum_3.webp" alt="3D image of Grand Canal Museum Complex">
+                    </figure>
+                </div>
+                <div id="ecran-3" class="carrousel__ecran">
+                    <figure>
+                        <img src="/public/img/Museum_4.webp" alt="3D image of Grand Canal Museum Complex">
+                    </figure>
+                </div>
+                <div id="ecran-4" class="carrousel__ecran">
+                    <figure>
+                        <img src="/public/img/Museum_5.webp" alt="3D image of Grand Canal Museum Complex">
+                    </figure>
+                </div>
+                <div id="ecran-5" class="carrousel__ecran">
+                    <figure>
+                        <img src="/public/img/Museum_6.webp" alt="3D image of Grand Canal Museum Complex">
+                    </figure>
+                </div>
+            </div>
+        </div>
         <footer class="footer">
             <img src="/public/icons/logo_svg_optima_48px.svg" alt="Optima logo">
             <div class="footer__information">

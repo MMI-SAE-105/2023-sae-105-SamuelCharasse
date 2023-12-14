@@ -42,9 +42,31 @@
             <h3 class="article--h3">Pedestrian-Friendly Design and Community Integration</h3>
             <p class="article--content">At street level, the project unfolds as an extensive park-like landscape, elevating the pedestrian experience and seamlessly connecting residents to the vibrant city life. An activated, public street-level program reinforces the project's ties to the surrounding city, fostering a sense of community and engagement.</p>
         </section>
-        <section class="carousel">
-            
-        </section>
+        <div class="carrousel" x-data="{hrefCourant: '#ecran-1'}">
+            <button @click="$refs.parent.scrollLeft-=$refs.parent.clientWidth" class="carrousel__btn carrousel__btn--avant" aria-label="slide précedant"><</button><button @click="$refs.parent.scrollLeft+=$refs.parent.clientWidth" class="carrousel__btn carrousel__btn--apres" aria-label="slide suivant">></button>
+            <div class="carrousel__parent--ecrans" x-ref="parent" @scroll.debounce.250ms.passive="hrefCourant='#'+[...$refs.parent.children].find(e=>e.getBoundingClientRect().x>=0).id">
+                <div id="ecran-1" class="carrousel__ecran">
+                    <figure>
+                        <img src="/public/img/Park_towers_4.webp" alt="3D image of Currie Park Towers">
+                    </figure>
+                </div>
+                <div id="ecran-2" class="carrousel__ecran">
+                    <figure>
+                        <img src="/public/img/Park_towers_2.webp" alt="3D image of Currie Park Towers">
+                    </figure>
+                </div>
+                <div id="ecran-3" class="carrousel__ecran">
+                    <figure>
+                        <img src="/public/img/Park_towers_3.webp" alt="3D image of Currie Park Towers">
+                    </figure>
+                </div>
+                <div id="ecran-4" class="carrousel__ecran">
+                    <figure>
+                        <img src="/public/img/Park_towers_1.webp" alt="3D image of Currie Park Towers">
+                    </figure>
+                </div>
+            </div>
+        </div>
         <footer class="footer">
             <img src="/public/icons/logo_svg_optima_48px.svg" alt="Optima logo">
             <div class="footer__information">

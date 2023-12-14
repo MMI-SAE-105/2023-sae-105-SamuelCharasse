@@ -42,9 +42,31 @@
             <h3 class="article--h3">Historical Echoes along Rämistrasse</h3>
             <p class="article--content">Winding along Rämistrasse, the FORUM UZH becomes a living chapter in Zurich's rich history. Lined with historic buildings, this thoroughfare tells a story of continuity, where the pursuit of knowledge has been a constant thread. Herzog & De Meuron's design aligns with this historical context, creating a dialogue between the old and the new—a conversation that echoes the city's commitment to intellectual and cultural advancement.</p>
         </section>
-        <section class="carousel">
-            
-        </section>
+        <div class="carrousel" x-data="{hrefCourant: '#ecran-1'}">
+            <button @click="$refs.parent.scrollLeft-=$refs.parent.clientWidth" class="carrousel__btn carrousel__btn--avant" aria-label="slide précedant"><</button><button @click="$refs.parent.scrollLeft+=$refs.parent.clientWidth" class="carrousel__btn carrousel__btn--apres" aria-label="slide suivant">></button>
+            <div class="carrousel__parent--ecrans" x-ref="parent" @scroll.debounce.250ms.passive="hrefCourant='#'+[...$refs.parent.children].find(e=>e.getBoundingClientRect().x>=0).id">
+                <div id="ecran-1" class="carrousel__ecran">
+                    <figure>
+                        <img src="/public/img/Hospital_2.webp" alt="3D image of Zealand Hospital">
+                    </figure>
+                </div>
+                <div id="ecran-2" class="carrousel__ecran">
+                    <figure>
+                        <img src="/public/img/Hospital_3.webp" alt="3D image of Zealand Hospital">
+                    </figure>
+                </div>
+                <div id="ecran-3" class="carrousel__ecran">
+                    <figure>
+                        <img src="/public/img/Hospital_4.webp" alt="3D image of Zealand Hospital">
+                    </figure>
+                </div>
+                <div id="ecran-4" class="carrousel__ecran">
+                    <figure>
+                        <img src="/public/img/Hospital_5.webp" alt="3D image of Zealand Hospital">
+                    </figure>
+                </div>
+            </div>
+        </div>
         <footer class="footer">
             <img src="/public/icons/logo_svg_optima_48px.svg" alt="Optima logo">
             <div class="footer__information">
