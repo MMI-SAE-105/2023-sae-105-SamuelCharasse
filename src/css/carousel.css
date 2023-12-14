@@ -1,0 +1,44 @@
+.carrousel {
+    position: relative;
+}
+.carrousel__parent--ecrans {
+    display: flex;
+    width: 100%;
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+}
+.carrousel__ecran {
+    width: 100%;
+    flex: none;
+    scroll-snap-align: start;
+}
+.carrousel__ecran figure {
+    margin: 0;
+}
+.carrousel__btn {
+    position: absolute;
+    top: 50%;
+    top: calc(
+      min(500px, 100vw) / 16 * 9 / 2 + 1rem
+    ); /* centre verticalement ~50% vertical */
+    transform: translateY(-50%); /* methode du point mort */
+    width: 2rem;
+    height: 2rem;
+    background: #001A23;
+    border-radius: 50%;
+    border: none;
+    display: grid;
+    place-content: center;
+    color: #FDF7FA;
+}
+.carrousel__btn--avant {
+    left: 0;
+}
+.carrousel__btn--apres {
+    right: 0;
+}
+.carrousel__ecran figure img {
+    height: 300px; /* Remplacez par la hauteur que vous voulez */
+    object-fit: cover; /* Pour maintenir l'aspect ratio de l'image */
+}
