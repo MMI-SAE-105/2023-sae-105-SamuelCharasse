@@ -16,9 +16,8 @@
                 <p>Optima</p>
                 <a href="#" aria-controls="mainNav" @click="menuIsOpen = ! menuIsOpen" class="header--link"><img class="header--img" src="/public/icons/logo_svg_menu_24px.svg" alt="Icone menu"></a>
             </div>
-            <div class="menu">
-                <nav id="mainNav" x-show="menuIsOpen" x-transition.duration.400ms class="menu__list">
-                    <a href="information.html" class="menu__list--link">Information</a>
+            <div id="mainNav" x-show="menuIsOpen" x-transition.duration.400ms  class="menu">
+                <nav class="menu__list">                    <a href="information.html" class="menu__list--link">Information</a>
                     <a href="ticketing.html" class="menu__list--link">Ticketing</a>
                     <a href="projects.html" class="menu__list--link">Projects</a>
                     <a href="about.html" class="menu__list--link">About</a>
