@@ -42,9 +42,36 @@
             <h3 class="article--h3">A landmark for Seoul's cultural legacy</h3>
             <p class="article--content">As Herzog & De Meuron redefine the concept of art storage, the Seoripul Open Art Storage is poised to become a landmark representing Seoul's rich cultural legacy. The project not only emphasizes the preservation of artistic treasures but also seeks to create an inclusive space that fosters cultural exchange and community engagement.</p>
         </section>
-        <section class="carousel">
-
-        </section>
+            <div class="carrousel" x-data="{hrefCourant: '#ecran-1'}">
+                <button @click="$refs.parent.scrollLeft-=$refs.parent.clientWidth" class="carrousel__btn carrousel__btn--avant" aria-label="slide précedant"><</button><button @click="$refs.parent.scrollLeft+=$refs.parent.clientWidth" class="carrousel__btn carrousel__btn--apres" aria-label="slide suivant">></button>
+                <div class="carrousel__parent--ecrans" x-ref="parent" @scroll.debounce.250ms.passive="hrefCourant='#'+[...$refs.parent.children].find(e=>e.getBoundingClientRect().x>=0).id">
+                    <div id="ecran-1" class="carrousel__ecran">
+                        <figure>
+                            <img src="/public/img/Seoripul_2.webp" alt="3D image of Seoripul">
+                        </figure>
+                    </div>
+                    <div id="ecran-2" class="carrousel__ecran">
+                        <figure>
+                            <img src="/public/img/Seoripul_3.webp" alt="3D image of Seoripul">
+                        </figure>
+                    </div>
+                    <div id="ecran-3" class="carrousel__ecran">
+                        <figure>
+                            <img src="/public/img/Seoripul_4.webp" alt="3D image of Seoripul">
+                        </figure>
+                    </div>
+                    <div id="ecran-4" class="carrousel__ecran">
+                        <figure>
+                            <img src="/public/img/Seoripul_5.webp" alt="3D image of Seoripul">
+                        </figure>
+                    </div>
+                    <div id="ecran-5" class="carrousel__ecran">
+                        <figure>
+                            <img src="/public/img/Seoripul_night.webp" alt="3D image of Seoripul">
+                        </figure>
+                    </div>
+                </div>
+            </div>
         <footer class="footer">
             <img src="/public/icons/logo_svg_optima_48px.svg" alt="Optima logo">
             <div class="footer__information">
