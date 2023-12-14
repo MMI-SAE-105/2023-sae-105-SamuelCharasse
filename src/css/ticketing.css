@@ -1,0 +1,48 @@
+.ticket {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 48px;
+    padding: 32px 16px;
+}
+.ticket__prices {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    gap: 32px;
+}
+.ticket__fullprice, 
+.ticket__reducedprice, 
+.ticket__reduction,
+.ticket__fondation,
+.ticket__free {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    gap: 16px;
+    padding: 8px;
+    border: 5px solid var(--shade-white);
+    border-radius: 8px;
+}
+.ticket__subject {
+    font-family: var(--body-font-family);
+    font-weight: var(--body-font-weight);
+    font-size: var(--body-font-size);
+    letter-spacing: var(--body-letter-spacing);
+    line-height: var(--body-line-height);
+    color: var(--main-black);
+}
+.ticket__amount {
+    font-family: var(--h3-font-family);
+    font-weight: var(--h3-font-weight);
+    font-size: var(--h3-font-size);
+    letter-spacing: var(--h3-letter-spacing);
+    line-height: var(--h3-line-height);
+    color: var(--main-black);
+    text-align: right;
+}
+.ticket__btn {
+    width: fit-content;
+    padding: 8px;
+}
