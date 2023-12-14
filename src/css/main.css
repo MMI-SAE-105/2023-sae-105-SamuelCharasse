@@ -1,6 +1,7 @@
 @import url(./header.css);
 @import url(./menu.css);
 @import url(./carousel.css);
+@import url(./styleguide.css);
 
 @import url('https://fonts.googleapis.com/css2?family=Major+Mono+Display&family=Sometype+Mono:wght@400;700&display=swap');
 
@@ -13,26 +14,26 @@ img, video {
     height: auto;
 }
 body {
-    background-color: #FDF7FA;
-    font-family: 'Sometype Mono', sans-serif;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 1.5;
+    background-color: var(--main-white);
+    font-family: var(--body-font-family);
+    font-weight: var(--body-font-weight);
+    font-size: var(--body-font-size);
+    line-height: var(--body-line-height);
 }
 h1 {
-    font-family: 'Major Mono Display', sans-serif;
-    font-size: 36px;
-    letter-spacing: 10%;
+    font-family: var(--h1-font-family);
+    font-size: var(--h1-font-size);
+    letter-spacing: var(--h1-letter-spacing);
 }
 h2 {
-    font-family: 'Sometype Mono', sans-serif;
-    font-weight: 700;
-    font-size: 24px;
-    letter-spacing: 70%;
+    font-family: var(--h2-font-family);
+    font-weight: var(--h2-font-weight);
+    font-size: var(--h2-font-size);
+    letter-spacing: var(--h2-letter-spacing);
 }
 h3 {
-    font-family: 'Sometype Mono', sans-serif;
-    font-weight: 700;
-    font-size: 20px;
-    letter-spacing: 70%;
+    font-family: var(--h3-font-family);
+    font-weight: var(--h3-font-weight);
+    font-size: var(--h3-font-size);
+    letter-spacing: var(--h3-letter-spacing);
 }
