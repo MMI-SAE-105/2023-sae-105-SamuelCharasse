@@ -39,6 +39,6 @@
     right: 0;
 }
 .carrousel__ecran figure img {
-    height: 300px; /* Remplacez par la hauteur que vous voulez */
-    object-fit: cover; /* Pour maintenir l'aspect ratio de l'image */
+    height: 300px;
+    object-fit: cover;
 }
