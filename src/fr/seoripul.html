@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+        <script defer src="https://unpkg.com/alpinejs"></script>
+        <link rel="stylesheet" href="/src/css/main.css">
+        <link rel="icon" href="/public/icons/logo_svg_optima_48px.svg">
+        <title>Optima - Exposition</title>
+    </head>
+    <body>
+        <header x-data="{menuIsOpen: false}" :class="{noscroll:menuIsOpen}" >
+            <div class="header">
+                <a href="index.html" class="header--link"><img class="header--img" src="/public/icons/logo_svg_optima_48px.svg" alt="Logo Optima représentant un compas"></a>
+                <p>Optima</p>
+                <a href="#" aria-controls="mainNav" @click="menuIsOpen = ! menuIsOpen" class="header--link"><img class="header--img" src="/public/icons/logo_svg_menu_24px.svg" alt="Icone menu"></a>
+            </div>
+            <div id="mainNav" x-show="menuIsOpen" x-transition.duration.400ms  class="menu">
+                <nav class="menu__list">
+                    <a href="information.html" class="menu__list--link">Information</a>
+                    <a href="ticketing.html" class="menu__list--link">Ticketing</a>
+                    <a href="projects.html" class="menu__list--link">Projects</a>
+                    <a href="about.html" class="menu__list--link">About</a>
+                    <a href="timeline.html" class="menu__list--link">Timeline</a>
+                    <a href="contact.html" class="menu__list--link">Contact</a>
+                </nav>
+            </div>
+        </header>
+        <section class="article">
+            <h1 class="article--title">Seoripul Open Art Storage</h1>
+            <div class="article__div">
+                <img src="/public/img/Seoripul.webp" alt="3D image of Seoripul" class="article__div--img">
+                <p class="article__div--legend">Seoripul Open Art Storage - Seoul, South Korea</p>
+            </div>
+            <h3 class="article--h3">A fusion of preservation and innovation</h3>
+            <p class="article--content">Nestled on an untouched site at the Eastern Border of Seoripul Park, the Seoripul Open Art Storage seamlessly integrates preservation with innovation. The design is a testament to Herzog & De Meuron's commitment to pushing the boundaries of conventional architecture, offering a visually stunning and functional space for the preservation of Seoul's cultural treasures.</p>
+            <h3 class="article--h3">Beyond storage</h3>
+            <p class="article--content">More than just a repository for invaluable artworks, the Seoripul Open Art Storage aspires to be a dynamic civic space. Herzog & De Meuron's vision extends beyond the conventional role of a storage facility, aiming to create an environment that engages Seoul residents and global visitors alike. The incorporation of interactive exhibits, public spaces, and community events will transform this archive into a vibrant cultural hub.</p>
+            <h3 class="article--h3">Strategic location</h3>
+            <p class="article--content">Situated adjacent to the Seoripul Performance Art Center, the Seoripul Open Art Storage strategically enhances Seocho-Dong’s identity. This location, at the Eastern Border of Seoripul Park, adds a new dimension to the district, extending its cultural significance beyond its existing role as a judicial and educational hub on Seoul’s cultural map.</p>
+            <h3 class="article--h3">A landmark for Seoul's cultural legacy</h3>
+            <p class="article--content">As Herzog & De Meuron redefine the concept of art storage, the Seoripul Open Art Storage is poised to become a landmark representing Seoul's rich cultural legacy. The project not only emphasizes the preservation of artistic treasures but also seeks to create an inclusive space that fosters cultural exchange and community engagement.</p>
+        </section>
+            <div class="carrousel" x-data="{hrefCourant: '#ecran-1'}">
+                <button @click="$refs.parent.scrollLeft-=$refs.parent.clientWidth" class="carrousel__btn carrousel__btn--avant" aria-label="slide précedant"><</button><button @click="$refs.parent.scrollLeft+=$refs.parent.clientWidth" class="carrousel__btn carrousel__btn--apres" aria-label="slide suivant">></button>
+                <div class="carrousel__parent--ecrans" x-ref="parent" @scroll.debounce.250ms.passive="hrefCourant='#'+[...$refs.parent.children].find(e=>e.getBoundingClientRect().x>=0).id">
+                    <div id="ecran-1" class="carrousel__ecran">
+                        <figure>
+                            <img src="/public/img/Seoripul_2.webp" alt="3D image of Seoripul">
+                        </figure>
+                    </div>
+                    <div id="ecran-2" class="carrousel__ecran">
+                        <figure>
+                            <img src="/public/img/Seoripul_3.webp" alt="3D image of Seoripul">
+                        </figure>
+                    </div>
+                    <div id="ecran-3" class="carrousel__ecran">
+                        <figure>
+                            <img src="/public/img/Seoripul_4.webp" alt="3D image of Seoripul">
+                        </figure>
+                    </div>
+                    <div id="ecran-4" class="carrousel__ecran">
+                        <figure>
+                            <img src="/public/img/Seoripul_5.webp" alt="3D image of Seoripul">
+                        </figure>
+                    </div>
+                    <div id="ecran-5" class="carrousel__ecran">
+                        <figure>
+                            <img src="/public/img/Seoripul_night.webp" alt="3D image of Seoripul">
+                        </figure>
+                    </div>
+                </div>
+            </div>
+            <footer class="footer">
+                <img src="/public/icons/logo_svg_optima_48px_white.svg" alt="Optima logo">
+                <div class="footer__information">
+                    <img src="/public/icons/information_white.svg" alt="Information icon" class="footer__information--img">
+                    <a href="#" class="footer__information--link">Information</a>
+                </div>
+                <div class="footer__ticketing">
+                    <img src="/public/icons/ticket_white.svg" alt="Ticketing icon" class="footer__about--img">
+                    <a href="#" class="footer__ticketing--link">Ticketing</a>
+                </div>
+                <div class="footer__social">
+                    <a href="https://de-de.facebook.com/Herzog.deMeuron" class="footer__social--link" target="_blank"><img src="/public/icons/facebook_white.svg" alt="Facebook icon" class="footer__social--img"></a>
+                    <a href="https://www.instagram.com/herzogdemeuron/" class="footer__social--link" target="_blank"><img src="/public/icons/instagram_white.svg" alt="Instagram icon" class="footer__social--img"></a>
+                    <a href="https://twitter.com/herzogdemeuron" class="footer__social--link" target="_blank"><img src="/public/icons/x_white.svg" alt="X icon" class="footer__social--img"></a>
+                    <a href="https://www.herzogdemeuron.com/" class="footer__social--link" target="_blank"><img src="/public/icons/site_white.svg" alt="Site icon" class="footer__social--img"></a>
+                    <a href="https://vimeo.com/herzogdemeuron" class="footer__social--link" target="_blank"><img src="/public/icons/vimeo_white.svg" alt="Vimeo icon" class="footer__social--img"></a>
+                    <a href="https://www.linkedin.com/company/herzog-&-de-meuron/?originalSubdomain=ch" class="footer__social--link" target="_blank"><img src="/public/icons/linkedin_white.svg" alt="Linkedin icon" class="footer__social--img"></a>
+                </div>
+                <hr class="footer__line">
+                <div class="footer__mention">
+                    <p class="footer__mention--p">This website was created as part of an educational exercise at the MMI department in Montbéliard</p>
+                    <a href="#" class="footer__mention--link"><img src="/public/img/MMI_-_logo_quadri_-white.png" alt="MMI logo" class="footer__mention--img"></a>
+                </div>
+            </footer>
+    </body>
+    </html>

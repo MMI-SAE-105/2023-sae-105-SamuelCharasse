@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+    <script defer src="https://unpkg.com/alpinejs"></script>
+    <link rel="stylesheet" href="/src/css/main.css">
+    <link rel="icon" href="/public/icons/logo_svg_optima_48px.svg">
+    <title>Optima - Exposition</title>
+</head>
+    <body>
+        <header x-data="{menuIsOpen: false}" :class="{noscroll:menuIsOpen}" >
+            <div class="header">
+                <a href="index.html" class="header--link"><img class="header--img" src="/public/icons/logo_svg_optima_48px.svg" alt="Logo Optima représentant un compas"></a>
+                <p>Optima</p>
+                <a href="#" aria-controls="mainNav" @click="menuIsOpen = ! menuIsOpen" class="header--link"><img class="header--img" src="/public/icons/logo_svg_menu_24px.svg" alt="Icone menu"></a>
+            </div>
+            <div id="mainNav" x-show="menuIsOpen" x-transition.duration.400ms  class="menu">
+                <nav class="menu__list">
+                    <a href="information.html" class="menu__list--link">Information</a>
+                    <a href="ticketing.html" class="menu__list--link">Ticketing</a>
+                    <a href="projects.html" class="menu__list--link">Projects</a>
+                    <a href="about.html" class="menu__list--link">About</a>
+                    <a href="timeline.html" class="menu__list--link">Timeline</a>
+                    <a href="contact.html" class="menu__list--link">Contact</a>
+                </nav>
+            </div>
+        </header>
+        <section class="projects">
+            <h1 class="projects__title">Projects</h1>
+            <div class="projects__card">
+                <div class="projects__section">
+                    <img src="/public/img/Seoripul.webp" alt="3D image of Seoripul project" class="projects__section--img">
+                    <p class="projects__section--legend">Seoripul</p>
+                </div>
+                <a href="seoripul.html" class="projects__btn btn">More ...</a>
+            </div>
+            <!-- Projects will be added here dynamically -->
+            <div class="projects__card">
+                <div class="projects__section">
+                    <img src="/public/img/Museum_1.webp" alt="3D image of Grand Canal Museum Complex" class="projects__section--img">
+                    <p class="projects__section--legend">Grand Canal Museum Complex</p>
+                </div>
+                <a href="museum.html" class="projects__btn btn">More ...</a>
+            </div>
+            <div class="projects__card">
+                <div class="projects__section">
+                    <img src="/public/img/Park_towers_1.webp" alt="3D image of Currie park towers" class="projects__section--img">
+                    <p class="projects__section--legend">Currie park Towers</p>
+                </div>
+                <a href="towers.html" class="projects__btn btn">More ...</a>
+            </div>
+            <div class="projects__card">
+                <div class="projects__section">
+                    <img src="/public/img/Hauptpost_1.webp" alt="3D image of Hauptpost Basel" class="projects__section--img">
+                    <p class="projects__section--legend">Hauptpost Basel</p>
+                </div>
+                <a href="hauptpost.html" class="projects__btn btn">More ...</a>
+            </div>
+            <div class="projects__card">
+                <div class="projects__section">
+                    <img src="/public/img/UZH_1.webp" alt="3D image of the forum UZH" class="projects__section--img">
+                    <p class="projects__section--legend">Forum UZH</p>
+                </div>
+                <a href="uzh.html" class="projects__btn btn">More ...</a>
+            </div>
+            <div class="projects__card">
+                <div class="projects__section">
+                    <img src="/public/img/Hospital_1.webp" alt="3D image of New North Zealand Hospital" class="projects__section--img">
+                    <p class="projects__section--legend">New North Zealand Hospital</p>
+                </div>
+                <a href="hospital.html" class="projects__btn btn">More ...</a>
+            </div>
+            <div class="projects__card">
+                <div class="projects__section">
+                    <img src="/public/img/Bordeaux_1.webp" alt="3D image of New Bordeaux Stadium" class="projects__section--img">
+                    <p class="projects__section--legend">New Bordeaux Stadium</p>
+                </div>
+                <a href="stadium.html" class="projects__btn btn">More ...</a>
+            </div>
+            <div class="projects__card">
+                <div class="projects__section">
+                    <img src="/public/img/Burgos-1.webp" alt="3D image of Burgos Bulevar" class="projects__section--img">
+                    <p class="projects__section--legend">Burgos Bulevar</p>
+                </div>
+                <a href="burgos.html" class="projects__btn btn">More ...</a>
+            </div>
+        </section>
+        <footer class="footer">
+            <img src="/public/icons/logo_svg_optima_48px_white.svg" alt="Optima logo">
+            <div class="footer__information">
+                <img src="/public/icons/information_white.svg" alt="Information icon" class="footer__information--img">
+                <a href="#" class="footer__information--link">Information</a>
+            </div>
+            <div class="footer__ticketing">
+                <img src="/public/icons/ticket_white.svg" alt="Ticketing icon" class="footer__about--img">
+                <a href="#" class="footer__ticketing--link">Ticketing</a>
+            </div>
+            <div class="footer__social">
+                <a href="https://de-de.facebook.com/Herzog.deMeuron" class="footer__social--link" target="_blank"><img src="/public/icons/facebook_white.svg" alt="Facebook icon" class="footer__social--img"></a>
+                <a href="https://www.instagram.com/herzogdemeuron/" class="footer__social--link" target="_blank"><img src="/public/icons/instagram_white.svg" alt="Instagram icon" class="footer__social--img"></a>
+                <a href="https://twitter.com/herzogdemeuron" class="footer__social--link" target="_blank"><img src="/public/icons/x_white.svg" alt="X icon" class="footer__social--img"></a>
+                <a href="https://www.herzogdemeuron.com/" class="footer__social--link" target="_blank"><img src="/public/icons/site_white.svg" alt="Site icon" class="footer__social--img"></a>
+                <a href="https://vimeo.com/herzogdemeuron" class="footer__social--link" target="_blank"><img src="/public/icons/vimeo_white.svg" alt="Vimeo icon" class="footer__social--img"></a>
+                <a href="https://www.linkedin.com/company/herzog-&-de-meuron/?originalSubdomain=ch" class="footer__social--link" target="_blank"><img src="/public/icons/linkedin_white.svg" alt="Linkedin icon" class="footer__social--img"></a>
+            </div>
+            <hr class="footer__line">
+            <div class="footer__mention">
+                <p class="footer__mention--p">This website was created as part of an educational exercise at the MMI department in Montbéliard</p>
+                <a href="#" class="footer__mention--link"><img src="/public/img/MMI_-_logo_quadri_-white.png" alt="MMI logo" class="footer__mention--img"></a>
+            </div>
+        </footer>
+    </body>
+</html>

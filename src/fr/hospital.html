@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+        <script defer src="https://unpkg.com/alpinejs"></script>
+        <link rel="stylesheet" href="/src/css/main.css">
+        <link rel="icon" href="/public/icons/logo_svg_optima_48px.svg">
+        <title>Optima - Exposition</title>
+    </head>
+    <body>
+        <header x-data="{menuIsOpen: false}" :class="{noscroll:menuIsOpen}" >
+            <div class="header">
+                <a href="index.html" class="header--link"><img class="header--img" src="/public/icons/logo_svg_optima_48px.svg" alt="Logo Optima représentant un compas"></a>
+                <p>Optima</p>
+                <a href="#" aria-controls="mainNav" @click="menuIsOpen = ! menuIsOpen" class="header--link"><img class="header--img" src="/public/icons/logo_svg_menu_24px.svg" alt="Icone menu"></a>
+            </div>
+            <div id="mainNav" x-show="menuIsOpen" x-transition.duration.400ms  class="menu">
+                <nav class="menu__list">
+                    <a href="information.html" class="menu__list--link">Information</a>
+                    <a href="ticketing.html" class="menu__list--link">Ticketing</a>
+                    <a href="projects.html" class="menu__list--link">Projects</a>
+                    <a href="about.html" class="menu__list--link">About</a>
+                    <a href="timeline.html" class="menu__list--link">Timeline</a>
+                    <a href="contact.html" class="menu__list--link">Contact</a>
+                </nav>
+            </div>
+        </header>
+        <section class="article">
+            <h1 class="article--title">New North Zealand Hospital</h1>
+            <div class="article__div">
+                <img src="/public/img/Hospital_1.webp" alt="3D image of New North Zealand Hospital" class="article__div--img">
+                <p class="article__div--legend">New North Zealand Hospital - Hillerød, Denmark</p>
+            </div>
+            <h3 class="article--h3">Urban Integration Beyond Boundaries</h3>
+            <p class="article--content">The FORUM UZH is more than a building; it is a testament to the harmonious integration of education and urbanity. The terraces and central plaza serve as connective threads, weaving the university into the fabric of the city. This bold approach reinforces the idea that the pursuit of knowledge should not be confined within campus walls but should extend its reach into the public domain, fostering a sense of shared learning and collaboration.</p>
+            <h3 class="article--h3">A Crown Atop the Old Town</h3>
+            <p class="article--content">Perched majestically above the old town of Zurich, the university quarter, with the FORUM UZH as its jewel, proudly "crowns" the landscape. This architectural feat pays homage to the 19th-century ideals that elevated knowledge and culture to paramount importance. As a modern interpretation of historicizing and classicist structures, the FORUM UZH aligns itself with the grandeur of Rämistrasse, where old city walls once stood, creating a visual symphony that resonates with both the past and the present.</p>
+            <h3 class="article--h3">Open Doors to Education and Research</h3>
+            <p class="article--content">What sets the FORUM UZH apart is its openness to the public. Beyond being an educational and research center, it serves as a welcoming space where the city and the university seamlessly converge. Herzog & De Meuron's design transforms the traditional perception of campus boundaries, encouraging a dynamic exchange between scholars and the public. The FORUM UZH becomes a shared space, where ideas flow freely, transcending the confines of academia.</p>
+            <h3 class="article--h3">Historical Echoes along Rämistrasse</h3>
+            <p class="article--content">Winding along Rämistrasse, the FORUM UZH becomes a living chapter in Zurich's rich history. Lined with historic buildings, this thoroughfare tells a story of continuity, where the pursuit of knowledge has been a constant thread. Herzog & De Meuron's design aligns with this historical context, creating a dialogue between the old and the new—a conversation that echoes the city's commitment to intellectual and cultural advancement.</p>
+        </section>
+        <div class="carrousel" x-data="{hrefCourant: '#ecran-1'}">
+            <button @click="$refs.parent.scrollLeft-=$refs.parent.clientWidth" class="carrousel__btn carrousel__btn--avant" aria-label="slide précedant"><</button><button @click="$refs.parent.scrollLeft+=$refs.parent.clientWidth" class="carrousel__btn carrousel__btn--apres" aria-label="slide suivant">></button>
+            <div class="carrousel__parent--ecrans" x-ref="parent" @scroll.debounce.250ms.passive="hrefCourant='#'+[...$refs.parent.children].find(e=>e.getBoundingClientRect().x>=0).id">
+                <div id="ecran-1" class="carrousel__ecran">
+                    <figure>
+                        <img src="/public/img/Hospital_2.webp" alt="3D image of Zealand Hospital">
+                    </figure>
+                </div>
+                <div id="ecran-2" class="carrousel__ecran">
+                    <figure>
+                        <img src="/public/img/Hospital_3.webp" alt="3D image of Zealand Hospital">
+                    </figure>
+                </div>
+                <div id="ecran-3" class="carrousel__ecran">
+                    <figure>
+                        <img src="/public/img/Hospital_4.webp" alt="3D image of Zealand Hospital">
+                    </figure>
+                </div>
+                <div id="ecran-4" class="carrousel__ecran">
+                    <figure>
+                        <img src="/public/img/Hospital_5.webp" alt="3D image of Zealand Hospital">
+                    </figure>
+                </div>
+            </div>
+        </div>
+        <footer class="footer">
+            <img src="/public/icons/logo_svg_optima_48px_white.svg" alt="Optima logo">
+            <div class="footer__information">
+                <img src="/public/icons/information_white.svg" alt="Information icon" class="footer__information--img">
+                <a href="#" class="footer__information--link">Information</a>
+            </div>
+            <div class="footer__ticketing">
+                <img src="/public/icons/ticket_white.svg" alt="Ticketing icon" class="footer__about--img">
+                <a href="#" class="footer__ticketing--link">Ticketing</a>
+            </div>
+            <div class="footer__social">
+                <a href="https://de-de.facebook.com/Herzog.deMeuron" class="footer__social--link" target="_blank"><img src="/public/icons/facebook_white.svg" alt="Facebook icon" class="footer__social--img"></a>
+                <a href="https://www.instagram.com/herzogdemeuron/" class="footer__social--link" target="_blank"><img src="/public/icons/instagram_white.svg" alt="Instagram icon" class="footer__social--img"></a>
+                <a href="https://twitter.com/herzogdemeuron" class="footer__social--link" target="_blank"><img src="/public/icons/x_white.svg" alt="X icon" class="footer__social--img"></a>
+                <a href="https://www.herzogdemeuron.com/" class="footer__social--link" target="_blank"><img src="/public/icons/site_white.svg" alt="Site icon" class="footer__social--img"></a>
+                <a href="https://vimeo.com/herzogdemeuron" class="footer__social--link" target="_blank"><img src="/public/icons/vimeo_white.svg" alt="Vimeo icon" class="footer__social--img"></a>
+                <a href="https://www.linkedin.com/company/herzog-&-de-meuron/?originalSubdomain=ch" class="footer__social--link" target="_blank"><img src="/public/icons/linkedin_white.svg" alt="Linkedin icon" class="footer__social--img"></a>
+            </div>
+            <hr class="footer__line">
+            <div class="footer__mention">
+                <p class="footer__mention--p">This website was created as part of an educational exercise at the MMI department in Montbéliard</p>
+                <a href="#" class="footer__mention--link"><img src="/public/img/MMI_-_logo_quadri_-white.png" alt="MMI logo" class="footer__mention--img"></a>
+            </div>
+        </footer>
+    </body>
+    </html>
