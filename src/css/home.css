@@ -27,3 +27,6 @@
 .home__about--title {
     text-align: right;
 }
+.home__btn {
+    padding: 12px;
+}
