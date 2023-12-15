@@ -1,0 +1,40 @@
+
+.index {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 32px;
+    padding: 32px 16px;
+}
+.language {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 32px;
+    padding: 32px 16px;
+}
+.language__selection {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 32px;
+}
+.language__link {
+    text-decoration: none;
+    color: var(--main-black);
+    font-family: var(--button-font-family);
+    font-weight: var(--button-font-weight);
+    font-size: var(--button-font-size);
+    letter-spacing: var(--button-letter-spacing);
+    line-height: var(--button-line-height);
+    text-transform: uppercase;
+}
+h1.index__title {
+    color: var(--main-dark-blue);
+}
+h2.index__title {
+    color: var(--main-dark-blue);
+}
