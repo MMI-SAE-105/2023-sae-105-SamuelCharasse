@@ -25,13 +25,13 @@ form {
 fieldset {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     gap: 10px;
     padding: 10px;
     width: 100%;
     border: none;
 }
-legend {
+label {
     font-size: var(--smalltext-uppercase-font-family);
     font-weight: var(--smalltext-uppercase-font-weight);
     font-size: var(--smalltext-uppercase-font-size);
