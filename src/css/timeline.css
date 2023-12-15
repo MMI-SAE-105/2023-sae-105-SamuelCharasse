@@ -1,0 +1,34 @@
+.timeline {
+    display: flex;
+    flex-direction: raw;
+    overflow-y: auto;
+    gap: 56px;
+    padding: 36px 16px;
+}
+.timeline__event {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 16px;
+}
+.timeline__date {
+    font-family: var(--button-font-family);
+    font-weight: var(--button-font-weight);
+    font-size: var(--button-font-size);
+    letter-spacing: var(--button-letter-spacing);
+    line-height: var(--button-line-height);
+    color: var(--main-dark-cyan);
+}
+.timeline__description {
+    font-family: var(--smalltext-font-family);
+    font-weight: var(--smalltext-font-weight);
+    font-size: var(--smalltext-font-size);
+    letter-spacing: var(--smalltext-letter-spacing);
+    line-height: var(--smalltext-line-height);
+    color: var(--main-black);
+    text-align: left;
+}
+.timeline__btn {
+    padding: 8px;
+    width: min-content;
+}
